@@ -19,9 +19,7 @@ function App() {
       <div className={styles.imageContainer}>
         <img src="/banner.jpg" alt="Banner" className={styles.bannerImage} />
         <div className={styles.textOverlay}>
-          <h1
-            className={`${styles.whiteText} text-5xl md:text-6xl lg:text-7xl`}
-          >
+          <h1 className="text-white text-5xl md:text-6xl lg:text-7xl">
             Planet Keeper
           </h1>
           <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
