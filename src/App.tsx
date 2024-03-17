@@ -19,7 +19,7 @@ const wallet = new ArweaveWebWallet({
   logo: "https://jfbeats.github.io/ArweaveWalletConnector/placeholder.svg",
 });
 
-wallet.setUrl("arweave.app");
+wallet.setUrl("https://planetkeepers.vercel.app");
 await wallet.connect(); // on user gesture to avoid blocked popup
 
 function App() {
