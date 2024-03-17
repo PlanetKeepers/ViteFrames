@@ -44,3 +44,5 @@ end
 
 lua
 Send({Target = Router, Data = require('json').encode({hello = "world"})})
+
+- upload the website to Arweave to create a full stack Arweave app.
