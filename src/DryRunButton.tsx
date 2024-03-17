@@ -47,7 +47,12 @@ const DryRunButton = () => {
             <ul>
               {dryRunResult.Tags.map(
                 (
-                  tag: { name: string; value: string },
+                  tag: {
+                    name: string;
+                    value: string;
+                    owner: string;
+                    id: string;
+                  },
                   index: number // Access name and value properties correctly
                 ) => (
                   <li key={index}>
