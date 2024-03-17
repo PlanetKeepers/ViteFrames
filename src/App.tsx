@@ -2,7 +2,7 @@ import "@farcaster/auth-kit/styles.css";
 import { AuthKitProvider, SignInButton, useProfile } from "@farcaster/auth-kit";
 import DryRunButton from "./DryRunButton";
 import styles from "./App.module.css";
-/*import { ArweaveWebWallet } from "arweave-wallet-connector";  */
+import { ArweaveWebWallet } from "arweave-wallet-connector";
 
 const config = {
   // For a production app, replace this with an Optimism Mainnet
@@ -13,7 +13,6 @@ const config = {
   siweUri: "https://planetkeepers.vercel.app",
 };
 
-/*
 const wallet = new ArweaveWebWallet({
   // Initialize the wallet as soon as possible to get instant auto reconnect
   name: "Connector Example",
@@ -22,8 +21,6 @@ const wallet = new ArweaveWebWallet({
 
 wallet.setUrl("arweave.app");
 await wallet.connect(); // on user gesture to avoid blocked popup
-
-*/
 
 function App() {
   return (
