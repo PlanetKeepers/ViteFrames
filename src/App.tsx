@@ -15,25 +15,26 @@ const config = {
 function App() {
   return (
     <main className={styles.app}>
-      {" "}
       {/* Applying the black background */}
+      <div className={styles.imageContainer}>
+        <img src="/banner.jpg" alt="Banner" className={styles.bannerImage} />
+        <div className={styles.textOverlay}>
+          <h1
+            className={`${styles.whiteText} text-5xl md:text-6xl lg:text-7xl`}
+          >
+            Planet Keeper
+          </h1>
+          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
+            An app for our pollinators, utilizing Arweave, ao, and Farcaster.
+          </p>
+        </div>
+      </div>
+      <div style={{ paddingTop: "20vh", textAlign: "center" }}>
+        <Profile />
+      </div>
       <AuthKitProvider config={config}>
         <div style={{ position: "fixed", top: "12px", right: "12px" }}>
           <SignInButton />
-        </div>
-        <div className={styles.center}>
-          <img
-            src="/banner.jpg"
-            alt="Banner"
-            style={{ width: "75%", height: "auto", margin: "auto" }}
-          />
-        </div>
-        <div style={{ paddingTop: "20vh", textAlign: "center" }}>
-          <h1 className={styles.whiteText}>Planet Keeper</h1>
-          <p className={styles.whiteText}>
-            An app for our pollinators, utilizing Arweave, ao, and Farcaster.
-          </p>
-          <Profile />
         </div>
       </AuthKitProvider>
     </main>
@@ -51,16 +52,16 @@ function Profile() {
     <>
       {isAuthenticated ? (
         <div>
-          <p className={styles.whiteText}>
+          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
             Hello, {displayName}! Your FID is {fid}.
           </p>
-          <p className={styles.whiteText}>
+          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
             Your custody address is: <pre>{custody}</pre>
           </p>
           <DryRunButton />
         </div>
       ) : (
-        <p className={styles.whiteText}>
+        <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
           Click the "Sign in with Farcaster" button above, then scan the QR code
           to sign in.
         </p>

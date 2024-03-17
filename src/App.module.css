@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .app {
   background-color: black;
 }
@@ -8,4 +12,21 @@
 
 .whiteText {
   color: white;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
