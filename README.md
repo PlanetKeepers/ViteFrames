@@ -37,8 +37,12 @@ $ yarn dev
 
 ### Building roadmap
 
-- [] test SQLite
-- aos PlanetKeeper chatroom
+- [x] test SQLite
+  - result: did not pass through vercel so could not include it
+- [] aos PlanetKeeper chatroom
+- [x] create beekeeper token and .lua file
+  - templates are made but not tested yet
+- [] tokengate PlanetKeeper chatroom
 
 ```
 
@@ -48,14 +52,14 @@ end
 
 ```
 
-- potential --cron (30-minutes)
-- Understaning Process Ownership
+- [] potential --cron (30-minutes)
+- [] Understaning Process Ownership
   Start a new process with the aos console, the ownership of the process is set to your wallet address. aos uses the Owner global variable to define the ownership of the process. If you wish to transfer ownership or lock the process so that no one can own, you simply modify the Owner variable to another wallet address or set it to nil.
 
-- encoding data as json
+- [] encoding data as json
   When sending data to another process or an external service, you may want to use JSON as a way to encode the data for recipients. Using the json module in lua, you can encode and decode pure lua tables that contain values.
 
 lua
 Send({Target = Router, Data = require('json').encode({hello = "world"})})
 
-- upload the website to Arweave to create a full stack Arweave app.
+- [] upload the website to Arweave to create a full stack Arweave app.
