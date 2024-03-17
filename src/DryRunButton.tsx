@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { dryrun } from "@permaweb/aoconnect"; // Import dryrun function
 
 const DryRunButton = () => {
