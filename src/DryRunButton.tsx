@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { dryrun, DryRunResult } from "@permaweb/aoconnect"; // Import dryrun function and DryRunResult type
+import { dryrun } from "@permaweb/aoconnect"; // Import dryrun function
 
 const DryRunButton = () => {
-  const [dryRunResult, setDryRunResult] = useState<DryRunResult | null>(null); // State to store the dryrun result
+  const [dryRunResult, setDryRunResult] = useState<any | null>(null); // State to store the dryrun result
 
   const dryRunProcess = async () => {
     try {
