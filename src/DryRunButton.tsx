@@ -11,8 +11,6 @@ const DryRunButton = () => {
         data: "",
         tags: [{ name: "Action", value: "Balance" }],
         anchor: "1234",
-        owner: "",
-        Id: "",
       });
 
       setDryRunResult(result.Messages[0]); // Set the dryrun result to state
@@ -25,8 +23,8 @@ const DryRunButton = () => {
     <>
       <div>
         <p className="">
-          Clicking the button below that will trigger a dryrun process
-          illustrating the data from the PlanetKeeper process, which is ID: tbd
+          Clicking the button below will trigger a dry run process illustrating
+          the data from the PlanetKeeper process, which is ID: tbd
         </p>
         <button
           onClick={dryRunProcess}
@@ -41,40 +39,16 @@ const DryRunButton = () => {
             <h2>DryRun Result</h2>
             <p>Target: {dryRunResult.Target}</p>
             <p>Data: {dryRunResult.Data}</p>
-            <p>Owner: {dryRunResult.Owner}</p>
-            <p>Id: {dryRunResult.Id}</p>
+            <p>Owner: {dryRunResult.owner}</p> {/* Display Owner */}
+            <p>ID: {dryRunResult.Id}</p> {/* Display ID */}
+            <p>Name: {dryRunResult.Name}</p> {/* Display Name */}
             <p>Anchor: {dryRunResult.Anchor}</p>
             <h3>Tags:</h3>
             <ul>
               {dryRunResult.Tags.map(
                 (
-                  tag: {
-                    name:
-                      | string
-                      | number
-                      | boolean
-                      | React.ReactElement<
-                          any,
-                          string | React.JSXElementConstructor<any>
-                        >
-                      | Iterable<React.ReactNode>
-                      | React.ReactPortal
-                      | null
-                      | undefined;
-                    value:
-                      | string
-                      | number
-                      | boolean
-                      | React.ReactElement<
-                          any,
-                          string | React.JSXElementConstructor<any>
-                        >
-                      | Iterable<React.ReactNode>
-                      | React.ReactPortal
-                      | null
-                      | undefined;
-                  },
-                  index: React.Key | null | undefined
+                  tag: { name: string; value: string },
+                  index: number // Access name and value properties correctly
                 ) => (
                   <li key={index}>
                     {tag.name}: {tag.value}
