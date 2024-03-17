@@ -24,7 +24,6 @@ function App() {
             An app for our pollinators, utilizing Arweave, ao, and Farcaster.
           </p>
           <Profile />
-          <DryRunButton />
         </div>
       </AuthKitProvider>
     </main>
@@ -48,6 +47,7 @@ function Profile() {
           <p>
             Your custody address is: <pre>{custody}</pre>
           </p>
+          <DryRunButton />
         </div>
       ) : (
         <p>
