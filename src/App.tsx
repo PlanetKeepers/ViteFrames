@@ -27,13 +27,20 @@ function App() {
           </p>
         </div>
       </div>
-      <div style={{ paddingTop: "5vh", textAlign: "center" }}>
-        <Profile />
-      </div>
+      <div style={{ paddingTop: "5vh", textAlign: "center" }}></div>
       <AuthKitProvider config={config}>
-        <div style={{ position: "fixed", top: "12px", right: "12px" }}>
+        <div
+          style={{
+            position: "fixed",
+            top: "12px",
+            right: "12px",
+            backgroundColor: "#462A91",
+            borderRadius: "8px",
+          }}
+        >
           <SignInButton />
         </div>
+        <Profile />
       </AuthKitProvider>
     </main>
   );

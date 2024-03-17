@@ -22,7 +22,12 @@ const DryRunButton = () => {
 
   return (
     <>
-      <button onClick={dryRunProcess}>DryRun</button>{" "}
+      <button
+        onClick={dryRunProcess}
+        style={{ backgroundColor: "#462A91", color: "white" }}
+      >
+        DryRun
+      </button>{" "}
       {/* Button to trigger the dryrun process */}
       {dryRunResult && ( // Render dryrun result if available
         <div>
