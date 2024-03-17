@@ -25,6 +25,15 @@ $ yarn dev
 ### Troubles
 
 - tailwind docs do not list one step of adding the new index.css file as an import to the main.tsx file
+- SQL addition being accepted by vercel
+
+```
+
+  <script type="module" src="/sqlite/main.js"></script>
+  <pre class="main"></pre>
+  <pre class="worker"></pre>
+
+```
 
 ### Building roadmap
 
