@@ -1,7 +1,7 @@
 import "@farcaster/auth-kit/styles.css";
 import { AuthKitProvider, SignInButton, useProfile } from "@farcaster/auth-kit";
 import DryRunButton from "./DryRunButton";
-import styles from "./App.module.css"; // Importing the CSS module
+import styles from "./App.module.css";
 
 const config = {
   // For a production app, replace this with an Optimism Mainnet
@@ -60,9 +60,9 @@ function Profile() {
           <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
             Hello, {displayName}! Your FID is {fid}.
           </p>
-          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
+          <div className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
             Your custody address is: <pre>{custody}</pre>
-          </p>
+          </div>
           <DryRunButton />
         </div>
       ) : (

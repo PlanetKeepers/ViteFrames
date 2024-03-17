@@ -17,6 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     "ignoreDeprecations": "5.0" // Add this line to silence the deprecation error
   },
-  "include": ["src"],
+  "include": ["src", "sqlite/SqliteUI.tsx", "sql"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

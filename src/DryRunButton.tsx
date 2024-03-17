@@ -7,7 +7,7 @@ const DryRunButton = () => {
   const dryRunProcess = async () => {
     try {
       const result = await dryrun({
-        process: "-IkeOAK97iq7bQnQAeOupqQkLDDx17KccBKhuYbglQg", // Replace with your ao process ID
+        process: "a8zR1JbHsJhFyI_tURmtNyi8YT1z6oFD7cE1zvovLzc", // Replace with your ao process ID
         data: "", // Data for the dryrun (optional)
         tags: [{ name: "Action", value: "Balance" }], // Tags for the dryrun (optional)
         anchor: "1234", // Anchor for the dryrun (optional)

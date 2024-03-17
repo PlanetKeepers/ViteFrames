@@ -649,6 +649,11 @@
     uri-js "^4.4.1"
     valid-url "^1.0.9"
 
+"@sqlite.org/sqlite-wasm@^3.45.2-build1":
+  version "3.45.2-build1"
+  resolved "https://registry.npmjs.org/@sqlite.org/sqlite-wasm/-/sqlite-wasm-3.45.2-build1.tgz#e32c51a7f135a768e8a155e064a025366f03c376"
+  integrity sha512-TeQf8rNFQna8pg95IshtpXkhdMq1iNAXllCoNrhEn18660Hbal9yxKAYv+ZfC1kjfdEXMK6V0XanfX5OT5FyMw==
+
 "@stablelib/binary@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@stablelib/binary/-/binary-1.0.1.tgz"

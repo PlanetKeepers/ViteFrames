@@ -28,11 +28,15 @@ $ yarn dev
 
 ### Building roadmap
 
+- [] test SQLite
 - aos PlanetKeeper chatroom
 
-```function Prompt()
+```
+
+function Prompt()
     return "PlanetKeeper@aos> "
 end
+
 ```
 
 - potential --cron (30-minutes)
