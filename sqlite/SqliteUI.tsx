@@ -8,14 +8,10 @@ const SqliteUI: React.FC = () => {
   const [logMessages, setLogMessages] = useState<string[]>([]);
 
   const startSqliteProcesses = () => {
-    // Start SQLite processes
-    // You can call functions or perform any necessary initialization here
-    // For example:
     startWorker();
     startMain();
   };
 
-  // Function to handle messages from the worker
   const handleWorkerMessage = (e: MessageEvent) => {
     const { type, payload } = e.data;
     if (type === "log") {
@@ -23,7 +19,6 @@ const SqliteUI: React.FC = () => {
     }
   };
 
-  // Attach message listener to the worker
   const worker = new Worker("/worker.js", { type: "module" });
   worker.onmessage = handleWorkerMessage;
 

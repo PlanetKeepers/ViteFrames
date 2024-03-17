@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { dryrun } from "@permaweb/aoconnect"; // Import dryrun function
+import { createDataItemSigner, dryrun } from "@permaweb/aoconnect"; // Import dryrun function
 
 const DryRunButton = () => {
   const [dryRunResult, setDryRunResult] = useState<any | null>(null); // State to store the dryrun result
@@ -7,11 +7,12 @@ const DryRunButton = () => {
   const dryRunProcess = async () => {
     try {
       const result = await dryrun({
-        process: "a8zR1JbHsJhFyI_tURmtNyi8YT1z6oFD7cE1zvovLzc", // Replace with your ao process ID
-        data: "", // Data for the dryrun (optional)
-        tags: [{ name: "Action", value: "Balance" }], // Tags for the dryrun (optional)
-        anchor: "1234", // Anchor for the dryrun (optional)
-        // Add other optional parameters as needed
+        process: "a8zR1JbHsJhFyI_tURmtNyi8YT1z6oFD7cE1zvovLzc", //PlanetKeeper process ID
+        data: "",
+        tags: [{ name: "Action", value: "Balance" }],
+        anchor: "1234",
+        owner: "",
+        Id: "",
       });
 
       setDryRunResult(result.Messages[0]); // Set the dryrun result to state
@@ -40,6 +41,8 @@ const DryRunButton = () => {
             <h2>DryRun Result</h2>
             <p>Target: {dryRunResult.Target}</p>
             <p>Data: {dryRunResult.Data}</p>
+            <p>Owner: {dryRunResult.Owner}</p>
+            <p>Id: {dryRunResult.Id}</p>
             <p>Anchor: {dryRunResult.Anchor}</p>
             <h3>Tags:</h3>
             <ul>

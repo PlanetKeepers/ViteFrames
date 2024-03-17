@@ -1,4 +1,5 @@
-// In `worker.js`.
+// worker.js
+
 import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
 
 export const start = function () {

@@ -1,9 +1,9 @@
+// main.js
+
 import sqlite3InitModule from "@sqlite.org/sqlite-wasm";
 
 export const start = function () {
   const mainPre = document.querySelector(".main");
-  const workerPre = document.querySelector(".worker");
-
   const log = (...args) => {
     console.log(...args);
     mainPre.textContent += `${args.join(" ")}\n`;
@@ -11,15 +11,6 @@ export const start = function () {
   const error = (...args) => {
     console.error(...args);
     mainPre.textContent += `${args.join(" ")}\n`;
-  };
-
-  const workerLog = (...args) => {
-    console.log(...args);
-    workerPre.textContent += `${args.join(" ")}\n`;
-  };
-  const workerError = (...args) => {
-    console.error(...args);
-    workerPre.textContent += `${args.join(" ")}\n`;
   };
 
   const start = function (sqlite3) {
@@ -59,11 +50,4 @@ export const start = function () {
       error(err.name, err.message);
     }
   });
-
-  const worker = new Worker("/worker.js", { type: "module" });
-  worker.onmessage = (e) => {
-    e.data.type === "log"
-      ? workerLog(e.data.payload)
-      : workerError(e.data.payload);
-  };
 };
