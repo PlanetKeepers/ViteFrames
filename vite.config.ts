@@ -15,9 +15,3 @@ export default defineConfig({
     exclude: ["@sqlite.org/sqlite-wasm"],
   },
 });
-
-module.exports = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-};
