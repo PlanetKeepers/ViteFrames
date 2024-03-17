@@ -1,3 +1,5 @@
+/*
+
 import React, { useState } from "react";
 import { connect } from "@permaweb/aoconnect";
 
@@ -99,3 +101,6 @@ const PollinatorIndexer: React.FC = () => {
 };
 
 export default PollinatorIndexer;
+
+
+*/

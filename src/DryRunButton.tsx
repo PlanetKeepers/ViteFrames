@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createDataItemSigner, dryrun } from "@permaweb/aoconnect"; // Import dryrun function
+import { dryrun } from "@permaweb/aoconnect"; // Import dryrun function
 
 const DryRunButton = () => {
   const [dryRunResult, setDryRunResult] = useState<any | null>(null); // State to store the dryrun result
