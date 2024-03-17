@@ -1,5 +1,6 @@
 import "@farcaster/auth-kit/styles.css";
 import { AuthKitProvider, SignInButton, useProfile } from "@farcaster/auth-kit";
+import DryRunButton from "./DryRunButton";
 
 const config = {
   // For a production app, replace this with an Optimism Mainnet
@@ -17,47 +18,13 @@ function App() {
         <div style={{ position: "fixed", top: "12px", right: "12px" }}>
           <SignInButton />
         </div>
-        <div style={{ paddingTop: "33vh", textAlign: "center" }}>
-          <h1>@farcaster/auth-kit + Vite</h1>
+        <div style={{ paddingTop: "20vh", textAlign: "center" }}>
+          <h1>Planet Keeper</h1>
           <p>
-            This example app shows how to use{" "}
-            <a
-              href="https://docs.farcaster.xyz/auth-kit/introduction"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Farcaster AuthKit
-            </a>{" "}
-            and{" "}
-            <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
-              Vite
-            </a>
-            .
+            An app for our pollinators, utilizing Arweave, ao, and Farcaster.
           </p>
           <Profile />
-          <div>
-            <h2>Run this demo:</h2>
-            <div
-              style={{
-                margin: "0 auto",
-                padding: "24px",
-                textAlign: "left",
-                maxWidth: "640px",
-                backgroundColor: "#fafafa",
-                fontFamily: "monospace",
-                fontSize: "1.25em",
-                border: "1px solid #eaeaea",
-              }}
-            >
-              git clone https://github.com/farcasterxyz/auth-monorepo.git &&
-              <br />
-              cd auth-monorepo/examples/frontend-only &&
-              <br />
-              yarn install &&
-              <br />
-              yarn dev
-            </div>
-          </div>
+          <DryRunButton />
         </div>
       </AuthKitProvider>
     </main>
