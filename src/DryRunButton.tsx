@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { dryrun } from "@permaweb/aoconnect"; // Import dryrun function
+import React, { useState } from "react";
+import { dryrun, DryRunResult } from "@permaweb/aoconnect"; // Import dryrun function and DryRunResult type
 
 const DryRunButton = () => {
-  const [dryRunResult, setDryRunResult] = useState(null); // State to store the dryrun result
+  const [dryRunResult, setDryRunResult] = useState<DryRunResult | null>(null); // State to store the dryrun result
 
   const dryRunProcess = async () => {
     try {
@@ -32,11 +32,41 @@ const DryRunButton = () => {
           <p>Anchor: {dryRunResult.Anchor}</p>
           <h3>Tags:</h3>
           <ul>
-            {dryRunResult.Tags.map((tag, index) => (
-              <li key={index}>
-                {tag.name}: {tag.value}
-              </li>
-            ))}
+            {dryRunResult.Tags.map(
+              (
+                tag: {
+                  name:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | null
+                    | undefined;
+                  value:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | null
+                    | undefined;
+                },
+                index: React.Key | null | undefined
+              ) => (
+                <li key={index}>
+                  {tag.name}: {tag.value}
+                </li>
+              )
+            )}
           </ul>
         </div>
       )}
