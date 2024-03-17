@@ -9,3 +9,19 @@ $ git clone https://github.com/farcasterxyz/auth-monorepo.git && cd auth-monorep
 $ yarn install
 $ yarn dev
 ```
+
+# Tutorial
+
+### online
+
+- go to arweave.app
+- create a new wallet and store the location
+- remember your keyfile location pathway
+
+### terminal
+
+- create
+
+### Troubles
+
+- tailwind docs do not list one step of adding the new index.css file as an import to the main.tsx file

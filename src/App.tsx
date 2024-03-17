@@ -14,7 +14,7 @@ const config = {
 
 function App() {
   return (
-    <main className={styles.app}>
+    <main className={styles.root}>
       {/* Applying the black background */}
       <div className={styles.imageContainer}>
         <img src="/banner.jpg" alt="Banner" className={styles.bannerImage} />
@@ -22,12 +22,12 @@ function App() {
           <h1 className="text-white text-5xl md:text-6xl lg:text-7xl">
             Planet Keeper
           </h1>
-          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
+          <p className={`${styles.whiteText} text-lg md:text-xl lg:text-3xl`}>
             An app for our pollinators, utilizing Arweave, ao, and Farcaster.
           </p>
         </div>
       </div>
-      <div style={{ paddingTop: "20vh", textAlign: "center" }}>
+      <div style={{ paddingTop: "5vh", textAlign: "center" }}>
         <Profile />
       </div>
       <AuthKitProvider config={config}>
@@ -59,9 +59,11 @@ function Profile() {
           <DryRunButton />
         </div>
       ) : (
-        <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
-          Click the "Sign in with Farcaster" button above, then scan the QR code
-          to sign in.
+        <p
+          className={`${styles.whiteText} mb-20 text-lg md:text-xl lg:text-2xl`}
+        >
+          Click the Farcaster "Sign in" button above, then scan the QR code to
+          sign in. If you want
         </p>
       )}
     </>
