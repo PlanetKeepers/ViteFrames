@@ -54,9 +54,9 @@ function Profile() {
   } = profile;
 
   return (
-    <>
+    <div className="flex mt-10 mb-20 justify-center items-center ">
       {isAuthenticated ? (
-        <div>
+        <div className="text-center">
           <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
             Hello, {displayName}! Your FID is {fid}.
           </p>
@@ -66,14 +66,12 @@ function Profile() {
           <DryRunButton />
         </div>
       ) : (
-        <p
-          className={`${styles.whiteText} mb-20 text-lg md:text-xl lg:text-2xl`}
-        >
+        <p className={`${styles.whiteText} text-lg md:text-xl lg:text-2xl`}>
           Click the Farcaster "Sign in" button above, then scan the QR code to
           sign in. If you want
         </p>
       )}
-    </>
+    </div>
   );
 }
 

@@ -22,59 +22,66 @@ const DryRunButton = () => {
 
   return (
     <>
-      <button
-        onClick={dryRunProcess}
-        style={{ backgroundColor: "#462A91", color: "white" }}
-      >
-        DryRun
-      </button>{" "}
-      {/* Button to trigger the dryrun process */}
-      {dryRunResult && ( // Render dryrun result if available
-        <div>
-          <h2>DryRun Result</h2>
-          <p>Target: {dryRunResult.Target}</p>
-          <p>Data: {dryRunResult.Data}</p>
-          <p>Anchor: {dryRunResult.Anchor}</p>
-          <h3>Tags:</h3>
-          <ul>
-            {dryRunResult.Tags.map(
-              (
-                tag: {
-                  name:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | null
-                    | undefined;
-                  value:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | null
-                    | undefined;
-                },
-                index: React.Key | null | undefined
-              ) => (
-                <li key={index}>
-                  {tag.name}: {tag.value}
-                </li>
-              )
-            )}
-          </ul>
-        </div>
-      )}
+      <div>
+        <p className="">
+          Clicking the button below that will trigger a dryrun process
+          illustrating the data from the PlanetKeeper process, which is ID: tbd
+        </p>
+        <button
+          onClick={dryRunProcess}
+          style={{ backgroundColor: "#462A91", color: "white" }}
+          className="py-2 px-6 text-lg font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75"
+        >
+          DryRun
+        </button>{" "}
+        {/* Button to trigger the dryrun process */}
+        {dryRunResult && ( // Render dryrun result if available
+          <div>
+            <h2>DryRun Result</h2>
+            <p>Target: {dryRunResult.Target}</p>
+            <p>Data: {dryRunResult.Data}</p>
+            <p>Anchor: {dryRunResult.Anchor}</p>
+            <h3>Tags:</h3>
+            <ul>
+              {dryRunResult.Tags.map(
+                (
+                  tag: {
+                    name:
+                      | string
+                      | number
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | null
+                      | undefined;
+                    value:
+                      | string
+                      | number
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | null
+                      | undefined;
+                  },
+                  index: React.Key | null | undefined
+                ) => (
+                  <li key={index}>
+                    {tag.name}: {tag.value}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
     </>
   );
 };
