@@ -27,3 +27,28 @@
   text-align: center;
   color: white;
 }
+
+/* Header styles */
+header {
+  background-color: #000000;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+/* Mobile media queries */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Change to vertical layout on mobile */
+  }
+}
