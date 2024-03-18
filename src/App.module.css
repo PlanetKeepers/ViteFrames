@@ -46,9 +46,22 @@ nav ul li {
   margin-right: 10px;
 }
 
-/* Mobile media queries */
 @media (max-width: 768px) {
+  header {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .textOverlay h1 {
+    font-size: 24px; /* Reduce font size for mobile */
+  }
+
   nav ul {
-    flex-direction: column; /* Change to vertical layout on mobile */
+    flex-direction: row; /* Change to horizontal layout on mobile */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  nav ul li {
+    margin-right: 0; /* Remove right margin for mobile */
+    margin-bottom: 10px; /* Add bottom margin for mobile */
   }
 }
